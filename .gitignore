@@ -1,0 +1,16 @@
+# OS & Editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python cache / virtual environments (for the subtitle generator script)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Vercel local cache
+.vercel
+
+# Temporarily ignore Group song folder until ready
+videos/Group song/

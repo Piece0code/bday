@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Ton Cadeau d'Anniversaire 🎁 • ¡Feliz Cumpleaños!</title>
+  <meta name="description" content="Message vidéo d'anniversaire" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="gift" class="gift-viewport-lock">
+  <!-- Scenic Arica, Chile Background with Permanent Birthday Color Hue -->
+  <div class="arica-bg-wrapper" aria-hidden="true">
+    <div class="arica-bg-image"></div>
+    <div class="arica-birthday-hue"></div>
+    <div class="arica-vignette"></div>
+  </div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- FULL-SCREEN SINGLE-VIEWPORT LAYOUT (NO SCROLLING NEEDED) -->
+  <div class="gift-screen-layout">
+    <!-- Compact Top Bar -->
+    <header class="gift-top-bar">
+      <a href="index.html#gifts-section" class="back-to-gifts-btn">
+        <span>← Retour aux cadeaux</span>
+      </a>
+
+      <div class="gift-header-badge">
+        <span id="video-counter">🎁 Cadeau #01</span>
+        <span class="gift-header-sep">•</span>
+        <span id="current-video-speaker">De : Frère Ramón</span>
+      </div>
+
+      <button type="button" class="toolbar-btn" id="celebrate-btn">
+        🎉
+      </button>
+    </header>
+
+    <!-- Main Stage with Left/Right Gift Navigation Buttons on the Sides of the Video -->
+    <main class="gift-stage-row">
+      <!-- Previous Gift Button (Left Side of Video) -->
+      <button
+        type="button"
+        class="side-gift-nav side-prev"
+        id="prev-video-btn"
+        title="Cadeau précédent / Regalo anterior"
+      >
+        <span class="side-nav-arrow">❮</span>
+        <span class="side-nav-label">Cadeau<br />précédent</span>
+      </button>
+
+      <!-- Center Video + Subtitle Zone Right Under (Outside) the Video -->
+      <div class="player-wrapper" id="player-wrapper">
+        <div class="video-stage" id="video-stage">
+          <video
+            id="main-video"
+            class="main-video"
+            controls
+            autoplay
+            playsinline
+            webkit-playsinline
+            preload="auto"
+          >
+            <track
+              id="native-subtitle-track"
+              kind="subtitles"
+              srclang="fr"
+              label="Français"
+              default
+            />
+            Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+          </video>
+
+          <!-- Helpful state shown only when the .mp4 file is not found -->
+          <div id="missing-video-overlay" class="missing-video-overlay hidden">
+            <div class="missing-video-card">
+              <div class="missing-icon">🎬</div>
+              <h3>Vidéo introuvable</h3>
+              <p>
+                Le fichier <code id="missing-video-path">videos/video1.mp4</code> est introuvable.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dedicated Live Subtitle Zone Right Under (Outside) the Video Frame -->
+        <div
+          id="custom-subtitle-overlay"
+          class="external-subtitle-bar"
+          aria-live="polite"
+        >
+          <div id="subtitle-box" class="subtitle-box">
+            <div id="subtitle-line-fr" class="subtitle-line-fr"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next Gift Button (Right Side of Video) -->
+      <button
+        type="button"
+        class="side-gift-nav side-next"
+        id="next-video-btn"
+        title="Cadeau suivant / Siguiente regalo"
+      >
+        <span class="side-nav-arrow">❯</span>
+        <span class="side-nav-label">Cadeau<br />suivant 🎁</span>
+      </button>
+    </main>
+  </div>
+
+  <script src="videos-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

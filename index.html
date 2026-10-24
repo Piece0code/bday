@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Joyeux Anniversaire ! • ¡Feliz Cumpleaños! 🎂🎁</title>
+  <meta name="description" content="Joyeux Anniversaire • ¡Feliz Cumpleaños!" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <!-- Scenic Arica, Chile Background with Permanent Birthday Color Hue -->
+  <div class="arica-bg-wrapper" aria-hidden="true">
+    <div class="arica-bg-image"></div>
+    <div class="arica-birthday-hue"></div>
+    <div class="arica-vignette"></div>
+  </div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- COMPACT HERO SECTION (NO SPOILER INTRODUCTION) -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-badge" id="hero-badge">
+        ✨ Joyeux Anniversaire • ¡Feliz Cumpleaños! ✨
+      </div>
+
+      <h1 class="hero-title">
+        <span id="hero-title-fr">Joyeux Anniversaire</span>
+        <span class="hero-recipient" id="hero-recipient">Maman • Tía • Hermana</span>
+        <span class="hero-title-es" id="hero-title-es">¡Feliz Cumpleaños!</span>
+      </h1>
+    </div>
+  </header>
+
+  <!-- GIFTS SECTION (IMMEDIATELY VISIBLE) -->
+  <main class="main-content container">
+    <section id="gifts-section" class="gifts-section" aria-label="Cadeaux d'anniversaire à ouvrir">
+      <div class="section-header">
+        <h2 class="section-title">🎁 Tes Cadeaux • Tus Regalos</h2>
+        <div class="gallery-subtitle-pill" id="gifts-progress-pill">
+          🎁 0 / 9 Cadeaux ouverts
+        </div>
+      </div>
+
+      <div class="gifts-grid" id="video-grid">
+        <!-- Dynamically populated with simplified wrapped birthday presents from videos-data.js -->
+      </div>
+    </section>
+  </main>
+
+  <script src="videos-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
